@@ -1,0 +1,16 @@
+// program to find the LCM of two integers
+
+// take input
+const n1 = prompt('Enter a first positive integer: ');
+const n2 = prompt('Enter a second positive integer: ');
+const leastCommonMultiple = (n1, n2) => {
+   let hcf;
+   for (let i = 1; i <= n1 && i <= n2; i++) {
+      if( n1 % i == 0 && n2 % i == 0) {
+         hcf = i;
+      };
+   };
+   let lcm = (n1 * n2) / hcf;
+   return lcm;
+};
+console.log(leastCommonMultiple (n1, n2));
